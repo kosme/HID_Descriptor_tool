@@ -23,10 +23,11 @@ Local_Items={
     "Usage_Maximum" : 0x28,
 }
 IOF_Constants={
-    "IOF_ConstArry"     : 0x1,
-    "IOF_ConstVar"      : 0x3,
-    "IOF_Variable"      : 0x2,
     "IOF_Array"         : 0x0,
+    "IOF_ConstArry"     : 0x1,
+    "IOF_Variable"      : 0x2,
+    "IOF_ConstVar"      : 0x3,
+    "IOF_VarRelArry"   : 0x6,
     "IOF_VariableBuffer": 0x0102,
 }
 Clc_Constants={
@@ -52,8 +53,10 @@ Usage_Page_Constants={
 GenericDesktop_Constants={
 #Generic Desktop Page
     "Pointer_ID"   : 0x01,
+    "Mouse_ID"     : 0x02,
     "Joystick_ID"  : 0x04,
     "Game_Pad_ID"  : 0x05,
+    "Keyboard_ID"  : 0x06,
     "X_ID"         : 0x30,
     "Y_ID"         : 0x31,
     "Z_ID"         : 0x32,
@@ -70,7 +73,10 @@ Button_Constants={
 #Button Usage Page
     "No_botton_ID" : 0x00,
     "Button1_ID"   : 0x01,
+    "Button2_ID"   : 0x02,
+    "Button3_ID"   : 0x03,
     "Button4_ID"   : 0x04,
+    "Button5_ID"   : 0x05,
 }
 Ordinal_Constans={
     "Instance_1" : 0x01,
