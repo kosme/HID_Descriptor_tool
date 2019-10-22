@@ -47,8 +47,9 @@ Usage_Page_Constants={
     "Generic_Desktop_ID" : 0x01,
     "Simulation_ID"      : 0x02,
     "Button_ID"          : 0x09,
-    "Physical_Interface" : 0x0F,
     "Ordinal_ID"         : 0x0A,
+    "Consumer_ID"        : 0x0C,
+    "Physical_Interface" : 0x0F,
 }
 GenericDesktop_Constants={
 #Generic Desktop Page
@@ -78,9 +79,23 @@ Button_Constants={
     "Button4_ID"   : 0x04,
     "Button5_ID"   : 0x05,
 }
-Ordinal_Constans={
+Ordinal_Constants={
     "Instance_1" : 0x01,
     "Instance_2" : 0x02,
+}
+
+Consumer_Constants={
+    "Consumer_Control_ID"   : 0x01,
+    "Generic_GUI_Ctrl_ID"   : 0x0200,
+    "Zoom_In_ID"            : 0x022D,
+    "Zoom_Out_ID"           : 0x022E,
+    "Zoom_ID"               : 0x022F,
+    "Scroll_Up_ID"          : 0x0233,
+    "Scroll_Down_ID"        : 0x0234,
+    "Scroll_ID"             : 0x0235,
+    "Pan_Left_ID"           : 0x236,
+    "Pan_Right_ID"          : 0x237,
+    "Pan_ID"                : 0x238,
 }
 #PID usages from \
 #Device Class Definition for Physical Interface Devices (PID) Version 1.0
@@ -203,14 +218,16 @@ HID_Constants=[
     Clc_Constants,
     IOF_Constants,
     PID_Usage_Constants,
-    Ordinal_Constans,
+    Ordinal_Constants,
+    Consumer_Constants,
 ]
 UsageByPage={
     "Generic_Desktop_ID" : GenericDesktop_Constants,
     "Simulation_ID"      : SimulationControl_Constants,
     "Button_ID"          : Button_Constants,
     "Physical_Interface" : PID_Usage_Constants,
-    "Ordinal_ID"         : Ordinal_Constans,
+    "Consumer_ID"        : Consumer_Constants,
+    "Ordinal_ID"         : Ordinal_Constants,
 }
 ConstByItem={
     "Input"          : IOF_Constants,
