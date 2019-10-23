@@ -77,6 +77,8 @@ for line in lines:
 	print(line) #echo
 	line=line.expandtabs(tabsize=4)
 	copyline=line
+	if(copyline.find(" ")!=0):
+		copyline = " " + copyline
 	line=line.lstrip()
 	pos=line.find('//')
 	if pos>=0:
