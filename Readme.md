@@ -8,14 +8,14 @@ an extendable hid descriptor tool, implements a free conversion between hexdemic
 	Human Interface Device & Physical Interface Device usage definitions.  
 - DscToHex.py:  
 	parses the .rptDsc(report descriptor) into hexdemical codes.  
-- DscToDataStructuren.py:  
+- DscToDataStructure.py:  
 	parses the .rptDsc into c language data structure definitions.  
 - HexToString.py:  
 	parses the hexdemical codes to the report descriptor written in natural language.  
-  
+
 ## How to Use  
 - Before writing report descriptor in DscInput.rptDsc, you are recommended to copy \rptDsc to the path refered above so that syntax highlight can work. To parse the descriptor into bytes run DescriptorGenTool, to parse into c language data structure run DataStructureGen.py.   
-  
+
 ## Parser Limitations  
 For the purpose of freeing developers from the tedious and error prone works of writing the Report Descriptor or the data structure attached to it, i made this parser. However, the USB HID Report Descriptor itself was rather a flexible protocol. There is no perfect approach to an easy solution of all the problems we meet in developing.    
 ### bugs been found:  
