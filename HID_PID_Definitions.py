@@ -27,8 +27,18 @@ IOF_Constants={
     "IOF_ConstArry"     : 0x1,
     "IOF_Variable"      : 0x2,
     "IOF_ConstVar"      : 0x3,
-    "IOF_VarRelArry"   : 0x6,
+    "IOF_VarRelArry"    : 0x6,
+    "IOF_VarNoPreferred": 0x22,
     "IOF_VariableBuffer": 0x0102,
+    "IOF_Constant"      : 0x01,
+    "IOF_Absolute"      : 0x00,
+    "IOF_Array"         : 0x00,
+    "IOF_Relative"      : 0x04,
+    "IOF_Wrap"          : 0x08,
+    "IOF_Non_Linear"    : 0x10,
+    "IOF_No_Prefered"   : 0x20,
+    "IOF_Null_State"    : 0x40,
+    "IOF_Volatile"      : 0x80,
 }
 Clc_Constants={
     "Clc_Physical"     : 0x00,
@@ -46,29 +56,39 @@ Unit_Constants={
 Usage_Page_Constants={
     "Generic_Desktop_ID" : 0x01,
     "Simulation_ID"      : 0x02,
+    "Key_Codes_ID"       : 0x07,
+    "LEDS_ID"            : 0x08,
     "Button_ID"          : 0x09,
     "Ordinal_ID"         : 0x0A,
-    "Consumer_ID"        : 0x0C,
+    "Consumer_Page_ID"   : 0x0C,
+    "Digitizer_ID"       : 0x0D,
     "Physical_Interface" : 0x0F,
 }
 GenericDesktop_Constants={
 #Generic Desktop Page
-    "Pointer_ID"   : 0x01,
-    "Mouse_ID"     : 0x02,
-    "Joystick_ID"  : 0x04,
-    "Game_Pad_ID"  : 0x05,
-    "Keyboard_ID"  : 0x06,
-    "X_ID"         : 0x30,
-    "Y_ID"         : 0x31,
-    "Z_ID"         : 0x32,
-    "Rx_ID"        : 0x33,
-    "Ry_ID"        : 0x34,
-    "Rz_ID"        : 0x35,
-    "Byte_Count"   : 0x3B,
+    "Pointer_ID"    : 0x01,
+    "Mouse_ID"      : 0x02,
+    "Joystick_ID"   : 0x04,
+    "Game_Pad_ID"   : 0x05,
+    "Keyboard_ID"   : 0x06,
+    "Multi-Axis_ID" : 0x08,
+    "X_ID"          : 0x30,
+    "Y_ID"          : 0x31,
+    "Z_ID"          : 0x32,
+    "Rx_ID"         : 0x33,
+    "Ry_ID"         : 0x34,
+    "Rz_ID"         : 0x35,
+    "Dial_ID"       : 0x37,
+    "Wheel_ID"      : 0x38,
+    "Byte_Count"    : 0x3B,
+    "Start_ID"      : 0x3D,
 }
 SimulationControl_Constants={
 #Simulation Control Page
     "Throttle_ID"  : 0xBB,
+}
+LED_Constants={
+
 }
 Button_Constants={
 #Button Usage Page
@@ -86,16 +106,34 @@ Ordinal_Constants={
 
 Consumer_Constants={
     "Consumer_Control_ID"   : 0x01,
+    "App_launcher_ID"       : 0x0180,
+    "Internet_Browser_ID"   : 0x0196,
+    "Select_Task_ID"        : 0x01A2,
+    "Next_Task_ID"          : 0x01A3,
+    "Prev_Task_ID"          : 0x01A4,
+    "Dictionary_ID"         : 0x01A9,
+    "Desktop_ID"            : 0x01AA,
+    "File_Explorer_ID"      : 0x01B4,
+    "AL_Reserved"           : 0x01BB,
     "Generic_GUI_Ctrl_ID"   : 0x0200,
+    "AC_Find_ID"            : 0x021F,
+    "Refresh_ID"            : 0x0227,
     "Zoom_In_ID"            : 0x022D,
     "Zoom_Out_ID"           : 0x022E,
     "Zoom_ID"               : 0x022F,
     "Scroll_Up_ID"          : 0x0233,
     "Scroll_Down_ID"        : 0x0234,
     "Scroll_ID"             : 0x0235,
-    "Pan_Left_ID"           : 0x236,
-    "Pan_Right_ID"          : 0x237,
-    "Pan_ID"                : 0x238,
+    "Pan_Left_ID"           : 0x0236,
+    "Pan_Right_ID"          : 0x0237,
+    "Pan_ID"                : 0x0238,
+    "Rotate_ID"             : 0x0245,
+    "Distribute_Horiz_ID"   : 0x029B,
+    "Distribute_Vert_ID"    : 0x029C,
+}
+
+Digitizer_Constants ={
+
 }
 #PID usages from \
 #Device Class Definition for Physical Interface Devices (PID) Version 1.0
@@ -212,6 +250,7 @@ HID_Items=[Main_Items,Global_Items,Local_Items]
 HID_Constants=[
     GenericDesktop_Constants,
     SimulationControl_Constants,
+    LED_Constants,
     Button_Constants,
     Usage_Page_Constants,
     Unit_Constants,
@@ -220,13 +259,16 @@ HID_Constants=[
     PID_Usage_Constants,
     Ordinal_Constants,
     Consumer_Constants,
+    Digitizer_Constants,
 ]
 UsageByPage={
     "Generic_Desktop_ID" : GenericDesktop_Constants,
     "Simulation_ID"      : SimulationControl_Constants,
+    "LEDS_ID"            : LED_Constants,
     "Button_ID"          : Button_Constants,
     "Physical_Interface" : PID_Usage_Constants,
-    "Consumer_ID"        : Consumer_Constants,
+    "Consumer_Page_ID"   : Consumer_Constants,
+    "Digitizer_ID"       : Digitizer_Constants,
     "Ordinal_ID"         : Ordinal_Constants,
 }
 ConstByItem={
