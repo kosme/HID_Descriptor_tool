@@ -1,5 +1,7 @@
 import re
 from HID_PID_Definitions import *
+import argparse
+
 def Byte_Size(x):
 	'''ByteSize for Short Items
 	return 0,1,2,or4'''
@@ -67,8 +69,21 @@ def MatchDefine(defSets,findFunc):
 		if result:
 			return defDict
 	return None
-fileIn="DscInput.rptDsc"
-fileOut=open("Hex.out",'w')
+
+parser = argparse.ArgumentParser(description="Generate an HID descriptor structure")
+parser.add_argument('-i', '--input', dest='fileIn', action='store', help='input file name')
+parser.add_argument('-o', '--output', dest="fileOut", action='store', help='Output file name')
+args = parser.parse_args()
+
+fileIn=''
+if(len(args.fileIn)==0):
+	fileIn="DscInput.rptDsc"
+else:
+	fileIn = args.fileIn
+if(len(args.fileOut)==0):
+	fileOut=open("Hex.out",'w')
+else:
+	fileOut=open(args.fileOut,'w')
 lines=open(fileIn).readlines()
 bytecount=0
 usagePage=None
