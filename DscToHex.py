@@ -75,10 +75,8 @@ parser.add_argument('-i', '--input', dest='fileIn', action='store', help='input 
 parser.add_argument('-o', '--output', dest="fileOut", action='store', help='Output file name')
 args = parser.parse_args()
 
-fileIn=''
-if(len(args.fileIn)==0):
-	fileIn="DscInput.rptDsc"
-else:
+fileIn="DscInput.rptDsc"
+if(len(args.fileIn)!=0):
 	fileIn = args.fileIn
 if(len(args.fileOut)==0):
 	fileOut=open("Hex.out",'w')
