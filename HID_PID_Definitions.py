@@ -56,6 +56,7 @@ Unit_Constants={
 Usage_Page_Constants={
     "Generic_Desktop_ID" : 0x01,
     "Simulation_ID"      : 0x02,
+    "Generic_device_ID"  : 0x06,
     "Key_Codes_ID"       : 0x07,
     "LEDS_ID"            : 0x08,
     "Button_ID"          : 0x09,
@@ -63,6 +64,8 @@ Usage_Page_Constants={
     "Consumer_Page_ID"   : 0x0C,
     "Digitizer_ID"       : 0x0D,
     "Physical_Interface" : 0x0F,
+    "Vendor_Defined_ID"  : 0xFF,
+    "Undefined_0xffbc_ID": 0xFFBC,
 }
 GenericDesktop_Constants={
 #Generic Desktop Page
@@ -82,6 +85,8 @@ GenericDesktop_Constants={
     "Wheel_ID"      : 0x38,
     "Byte_Count"    : 0x3B,
     "Start_ID"      : 0x3D,
+    "System_Control_ID": 0x80,
+    "System_sleep_ID": 0x82,
 }
 SimulationControl_Constants={
 #Simulation Control Page
@@ -90,6 +95,11 @@ SimulationControl_Constants={
 LED_Constants={
 
 }
+
+Genericdevice_Constants={
+
+}
+
 Button_Constants={
 #Button Usage Page
     "No_botton_ID" : 0x00,
@@ -103,20 +113,34 @@ Ordinal_Constants={
     "Instance_1" : 0x01,
     "Instance_2" : 0x02,
 }
-
 Consumer_Constants={
     "Consumer_Control_ID"   : 0x01,
+    "Power_ID"              : 0x30,
+    "Undef_0x6F_ID"         : 0x6f,
+    "Undef_0x70_ID"         : 0x70,
+    "Scan_next_track_ID"       : 0xB5,
+    "Scan_previous_track_ID"       : 0xB6,
+    "Eject_ID"       : 0xB8,
+    "Play_Pause_ID"         : 0xCD,
+    "Mute_ID"               : 0xE2,
+    "Volume_Incement_ID"    : 0xE9,
+    "Volume_Decrement_ID"   : 0xEA,
     "App_launcher_ID"       : 0x0180,
+    "Programmable_Button_Config__ID"       : 0x0182,
+    "Email_Reader_ID"       : 0x018A,
     "Internet_Browser_ID"   : 0x0196,
     "Select_Task_ID"        : 0x01A2,
     "Next_Task_ID"          : 0x01A3,
     "Prev_Task_ID"          : 0x01A4,
     "Dictionary_ID"         : 0x01A9,
     "Desktop_ID"            : 0x01AA,
+    "Keyboard_layout_ID"    : 0x01AE,
     "File_Explorer_ID"      : 0x01B4,
     "AL_Reserved"           : 0x01BB,
     "Generic_GUI_Ctrl_ID"   : 0x0200,
     "AC_Find_ID"            : 0x021F,
+    "AC_Search_ID"          : 0x0221,
+    "AC_Home_ID"            : 0x0223,
     "Refresh_ID"            : 0x0227,
     "Zoom_In_ID"            : 0x022D,
     "Zoom_Out_ID"           : 0x022E,
@@ -130,6 +154,7 @@ Consumer_Constants={
     "Rotate_ID"             : 0x0245,
     "Distribute_Horiz_ID"   : 0x029B,
     "Distribute_Vert_ID"    : 0x029C,
+    "Reserved_0x307_ID"     : 0x0307,
 }
 
 Digitizer_Constants ={
@@ -246,6 +271,13 @@ PID_Usage_Constants={
     "PID_Create_New_Effect_Report"         : 0xAB,
     "PID_RAM_Pool_Available"               : 0xAC,
 }
+Vendor_Constants={
+    "Usage_1" : 0x01,
+    "Usage_2" : 0x02,
+}
+_0xffbc_Constants={
+
+}
 HID_Items=[Main_Items,Global_Items,Local_Items]
 HID_Constants=[
     GenericDesktop_Constants,
@@ -260,16 +292,20 @@ HID_Constants=[
     Ordinal_Constants,
     Consumer_Constants,
     Digitizer_Constants,
+    Vendor_Constants,
 ]
 UsageByPage={
     "Generic_Desktop_ID" : GenericDesktop_Constants,
     "Simulation_ID"      : SimulationControl_Constants,
+    "Generic_device_ID"  : Genericdevice_Constants,
     "LEDS_ID"            : LED_Constants,
     "Button_ID"          : Button_Constants,
     "Physical_Interface" : PID_Usage_Constants,
     "Consumer_Page_ID"   : Consumer_Constants,
     "Digitizer_ID"       : Digitizer_Constants,
     "Ordinal_ID"         : Ordinal_Constants,
+    "Vendor_Defined_ID"  : Vendor_Constants,
+    "Undefined_0xffbc_ID": _0xffbc_Constants,
 }
 ConstByItem={
     "Input"          : IOF_Constants,
