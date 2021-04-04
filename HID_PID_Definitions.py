@@ -62,7 +62,7 @@ Usage_Page_Constants={
     "Button_ID"          : 0x09,
     "Ordinal_ID"         : 0x0A,
     "Consumer_Page_ID"   : 0x0C,
-    "Digitizer_ID"       : 0x0D,
+    "Digitizer_Page_ID"  : 0x0D,
     "Physical_Interface" : 0x0F,
     "Vendor_Defined_ID"  : 0xFF,
     "Undefined_0xffbc_ID": 0xFFBC,
@@ -176,8 +176,18 @@ Consumer_Constants={
     "Reserved_0x307_ID"     : 0x0307,
 }
 
-Digitizer_Constants ={
-
+Digitizer_Constants = {
+    "Digitizer_ID"          : 0x01,
+    "Pen_ID"                : 0x02,
+    "Light_pen_ID"          : 0x03,
+    "Touchscreen_ID"        : 0x04,
+    "Stylus_ID"             : 0x20,
+    "Finger_ID"             : 0x22,
+    "In_Range_ID"           : 0x32,
+    "Tip_Switch_ID"         : 0x42,
+    "Contact_Ident_ID"      : 0x51,
+    "Contact_Count_ID"      : 0x54,
+    "Contact_Count_MAx_ID"  : 0x55,
 }
 #PID usages from \
 #Device Class Definition for Physical Interface Devices (PID) Version 1.0
@@ -321,7 +331,7 @@ UsageByPage={
     "Button_ID"          : Button_Constants,
     "Physical_Interface" : PID_Usage_Constants,
     "Consumer_Page_ID"   : Consumer_Constants,
-    "Digitizer_ID"       : Digitizer_Constants,
+    "Digitizer_Page_ID"  : Digitizer_Constants,
     "Ordinal_ID"         : Ordinal_Constants,
     "Vendor_Defined_ID"  : Vendor_Constants,
     "Undefined_0xffbc_ID": _0xffbc_Constants,
