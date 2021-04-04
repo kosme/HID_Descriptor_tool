@@ -66,6 +66,8 @@ Usage_Page_Constants={
     "Physical_Interface" : 0x0F,
     "Vendor_Defined_ID"  : 0xFF,
     "Undefined_0xffbc_ID": 0xFFBC,
+    "Undefined_0xff00_ID": 0xFF00,
+    "Undefined_0xff01_ID": 0xFF01,
 }
 
 Exponents_Constants={
@@ -88,24 +90,25 @@ Exponents_Constants={
 }
 GenericDesktop_Constants={
 #Generic Desktop Page
-    "Pointer_ID"    : 0x01,
-    "Mouse_ID"      : 0x02,
-    "Joystick_ID"   : 0x04,
-    "Game_Pad_ID"   : 0x05,
-    "Keyboard_ID"   : 0x06,
-    "Multi-Axis_ID" : 0x08,
-    "X_ID"          : 0x30,
-    "Y_ID"          : 0x31,
-    "Z_ID"          : 0x32,
-    "Rx_ID"         : 0x33,
-    "Ry_ID"         : 0x34,
-    "Rz_ID"         : 0x35,
-    "Dial_ID"       : 0x37,
-    "Wheel_ID"      : 0x38,
-    "Byte_Count"    : 0x3B,
-    "Start_ID"      : 0x3D,
-    "System_Control_ID": 0x80,
-    "System_sleep_ID": 0x82,
+    "Pointer_ID"        : 0x01,
+    "Mouse_ID"          : 0x02,
+    "Joystick_ID"       : 0x04,
+    "Game_Pad_ID"       : 0x05,
+    "Keyboard_ID"       : 0x06,
+    "Multi-Axis_ID"     : 0x08,
+    "X_ID"              : 0x30,
+    "Y_ID"              : 0x31,
+    "Z_ID"              : 0x32,
+    "Rx_ID"             : 0x33,
+    "Ry_ID"             : 0x34,
+    "Rz_ID"             : 0x35,
+    "Dial_ID"           : 0x37,
+    "Wheel_ID"          : 0x38,
+    "Byte_Count"        : 0x3B,
+    "Start_ID"          : 0x3D,
+    "Reserved_0x55_ID"  : 0x55,
+    "System_Control_ID" : 0x80,
+    "System_sleep_ID"   : 0x82,
 }
 SimulationControl_Constants={
 #Simulation Control Page
@@ -307,6 +310,12 @@ Vendor_Constants={
 _0xffbc_Constants={
 
 }
+_0xff00_Constants={
+
+}
+_0xff01_Constants={
+
+}
 HID_Items=[Main_Items,Global_Items,Local_Items]
 HID_Constants=[
     GenericDesktop_Constants,
@@ -335,6 +344,8 @@ UsageByPage={
     "Ordinal_ID"         : Ordinal_Constants,
     "Vendor_Defined_ID"  : Vendor_Constants,
     "Undefined_0xffbc_ID": _0xffbc_Constants,
+    "Undefined_0xff00_ID": _0xff00_Constants,
+    "Undefined_0xff01_ID": _0xff01_Constants,
 }
 ConstByItem={
     "Input"          : IOF_Constants,
