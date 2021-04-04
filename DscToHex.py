@@ -71,18 +71,20 @@ def MatchDefine(defSets,findFunc):
 	return None
 
 parser = argparse.ArgumentParser(description="Generate an HID descriptor structure")
-parser.add_argument('-i', '--input', dest='fileIn', action='store', help='input file name')
+parser.add_argument('-i', '--input', dest='fileIn', action='store', help='Input file name')
 parser.add_argument('-o', '--output', dest="fileOut", action='store', help='Output file name')
 args = parser.parse_args()
 
-fileIn="DscInput.rptDsc"
-if(len(args.fileIn)!=0):
+fileIn = "DscInput.rptDsc"
+fileOut =  ""
+if(args.fileIn):
 	fileIn = args.fileIn
-if(len(args.fileOut)==0):
-	fileOut=open("Hex.out",'w')
+if(not args.fileOut):
+	fileOut = open("Hex.out",'w')
 else:
-	fileOut=open(args.fileOut,'w')
-lines=open(fileIn).readlines()
+	fileOut = open(args.fileOut,'w')
+
+lines = open(fileIn).readlines()
 bytecount=0
 usagePage=None
 #descriptor parser

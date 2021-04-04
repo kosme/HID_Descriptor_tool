@@ -1,5 +1,7 @@
 import re
 from HID_PID_Definitions import *
+import argparse
+
 UsagePage=None
 def itemByHex(hexd):
 	for items in HID_Items:
@@ -36,8 +38,21 @@ def valueByHex(item, len, hexd):
 		hexd = -hexd
 		return hexd
 	return hexd
-fileIn = "Hex_Input.c"
-fileOut= open("DscOutput.rptDsc",'w')
+
+parser = argparse.ArgumentParser(description="Decode an HID descriptor sequence and generate a human readable structure")
+parser.add_argument('-i', '--input', dest='fileIn', action='store', help='Input file name')
+parser.add_argument('-o', '--output', dest="fileOut", action='store', help='Output file name')
+args = parser.parse_args()
+
+fileIn = "Hex.txt"
+fileOut = ""
+if(args.fileIn):
+	fileIn = args.fileIn
+if(not args.fileOut):
+	fileOut = open("Out.rptDsc",'w')
+else:
+	fileOut = open(args.fileOut,'w')
+
 lines  = open(fileIn).readlines()
 tabcnt = 0
 for line in lines:
@@ -58,6 +73,7 @@ for line in lines:
 	hValue=0
 	for i in range(0,length):
 		hValue += int(hexes[1+i],16)<<(i*8) #multi byte value
+	# print(str(item)+", "+str(length)+", "+str(hValue))
 	value=valueByHex(item, length, hValue) #got value
 
 	if item=='Usage_Page':
