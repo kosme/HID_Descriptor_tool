@@ -49,9 +49,12 @@ Clc_Constants={
     "Clc_Usage_Switch" : 0x05,
 }
 Unit_Constants={
-    "Eng_Lin_Time": 0x1003,
-    "Eng_Rot_Angular_Pos": 0x14,
     "Unit_None" : 0x00,
+    "Eng_Rot_Angular_Pos": 0x14,
+    "Eng_Lin_Dist": 0x13,
+    "Eng_Lin_Dist_power2": 0x23,
+    "Eng_Lin_Dist_power3": 0x33,
+    "Eng_Lin_Time": 0x1003,
 }
 Usage_Page_Constants={
     "Generic_Desktop_ID" : 0x01,
