@@ -67,6 +67,25 @@ Usage_Page_Constants={
     "Vendor_Defined_ID"  : 0xFF,
     "Undefined_0xffbc_ID": 0xFFBC,
 }
+
+Exponents_Constants={
+    "0"     : 0x00,
+    "1"     : 0x01,
+    "2"     : 0x02,
+    "3"     : 0x03,
+    "4"     : 0x04,
+    "5"     : 0x05,
+    "6"     : 0x06,
+    "7"     : 0x07,
+    "-8"    : 0x08,
+    "-7"    : 0x09,
+    "-6"    : 0x0a,
+    "-5"    : 0x0b,
+    "-4"    : 0x0c,
+    "-3"    : 0x0d,
+    "-2"    : 0x0e,
+    "-1"    : 0x0f,
+}
 GenericDesktop_Constants={
 #Generic Desktop Page
     "Pointer_ID"    : 0x01,
@@ -318,7 +337,7 @@ ConstByItem={
     "Logical_Maximum"  : {},
     "Physical_Minimum" : {},
     "Physical_Maximum" : {},
-    "Unit_Exponent"    : {},
+    "Unit_Exponent"    : Exponents_Constants,
     "Unit"             : Unit_Constants,
     "Report_Size"      : {},
     "Report_ID"        : {},
