@@ -10,14 +10,16 @@ an extendable hid descriptor tool, implements a free conversion between hexdemic
 	parses the .rptDsc(report descriptor) into hexdemical codes.  
 - DscToDataStructure.py:  
 	parses the .rptDsc into c language data structure definitions.  
+- hexSplitter.py:
+	parses a dump from a descriptor in hexadecimal form into the form expected by HexToString.py.
 - HexToString.py:  
-	parses the hexdemical codes to the report descriptor written in natural language.  
+	parses the hexadecimal codes to the report descriptor written in natural language.  
 
 ## How to Use  
 - Before writing report descriptor in DscInput.rptDsc, you are recommended to copy \rptDsc to the path refered above so that syntax highlight can work. To parse the descriptor into bytes run DescriptorGenTool, to parse into c language data structure run DataStructureGen.py.   
 
 ## Parser Limitations  
-For the purpose of freeing developers from the tedious and error prone works of writing the Report Descriptor or the data structure attached to it, i made this parser. However, the USB HID Report Descriptor itself was rather a flexible protocol. There is no perfect approach to an easy solution of all the problems we meet in developing.    
+For the purpose of freeing developers from the tedious and error prone works of writing the Report Descriptor or the data structure attached to it, I made this parser. However, the USB HID Report Descriptor itself was rather a flexible protocol. There is no perfect approach to an easy solution of all the problems we meet in developing.    
 ### bugs been found:  
 - c doesn't support usage like "enum XXX : _type {...}" to designate specific type to the enum.  
 

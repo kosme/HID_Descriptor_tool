@@ -1,7 +1,7 @@
 import argparse
 word_size = 2
 
-parser = argparse.ArgumentParser(description="Analyze a dumped HID descriptor and give it format for decription")
+parser = argparse.ArgumentParser(description="Analyze a dumped HID descriptor and give it format for decoding")
 parser.add_argument('-i', '--input', dest='fileIn', action='store', help='Input file name')
 parser.add_argument('-o', '--output', dest="fileOut", action='store', help='Output file name')
 args = parser.parse_args()
